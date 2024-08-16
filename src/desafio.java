@@ -37,8 +37,13 @@ public class desafio {
                 case 3:
                     System.out.println("Quanto deseja transferir: ");
                     double transferencia = leitura.nextDouble();
-                    saldo -= transferencia;
-                    System.out.println("Seu saldo foi atualizado para: " + saldo);
+                    if (transferencia > saldo){
+                        System.out.println("Nao ha saldo para transferir!");
+                    }
+                    else{
+                        saldo -= transferencia;
+                        System.out.println("Seu saldo foi atualizado para: " + saldo);
+                    }
                     break;
                 case 4 :
                     System.out.println("Saindo...");
